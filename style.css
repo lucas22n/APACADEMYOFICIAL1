@@ -1,0 +1,13 @@
+body{
+    background-color: #000;
+}
+
+.btn{
+    background-color: #9E6894;
+    border-color: white;
+}
+
+.panel-primary>.panel-heading{
+    background-color: #9E6894!important;
+    border-color: white!important;
+}

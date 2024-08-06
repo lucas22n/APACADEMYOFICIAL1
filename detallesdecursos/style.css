@@ -1,0 +1,174 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font: normal 100% "Muli", Arial;
+    background: #654491;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36rem;
+  }
+  @media screen and (max-width: 36rem) {
+    .container {
+      width: 90%;
+    }
+  }
+  
+  .credit {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .credit a {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 85%;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+  .credit a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  button {
+    border: 0;
+    padding: 20px 20px 16px 20px;
+    border-radius: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    line-height: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.15), 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+  button svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+  button:hover, button:focus {
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.3), 0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+  button:active {
+    transform: translateY(-2px);
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 0 rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .joke {
+    width: 100%;
+    min-height: 200px;
+  }
+  
+  details {
+    text-align: center;
+    color: #fff;
+    font-size: 200%;
+    overflow: none;
+  }
+  
+  summary {
+    font-size: 1;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  details[open] summary {
+    opacity: 0.8;
+    -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+    -webkit-animation-duration: 150ms;
+            animation-duration: 150ms;
+  }
+  
+  details span {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  @-webkit-keyframes tinyGrow {
+    0% {
+      font-size: 0;
+      opacity: 0;
+    }
+    100% {
+      font-size: 1em;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes tinyGrow {
+    0% {
+      font-size: 0;
+      opacity: 0;
+    }
+    100% {
+      font-size: 1em;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+  details span {
+    -webkit-animation-name: tinyGrow, fadeIn;
+            animation-name: tinyGrow, fadeIn;
+    -webkit-animation-duration: 350ms, 150ms;
+            animation-duration: 350ms, 150ms;
+    -webkit-animation-delay: 0ms, 200ms;
+            animation-delay: 0ms, 200ms;
+  }
